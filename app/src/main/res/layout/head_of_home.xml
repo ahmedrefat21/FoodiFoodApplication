@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:src="@drawable/log_out"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_home_good_morning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_home_good_morning" />
+
+    <TextView
+        android:id="@+id/tv_home_good_morning"
+        style="@style/headerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:drawablePadding="@dimen/padding_medium"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/welcome_cheif"
+        android:textSize="@dimen/text_medium"
+        app:drawableEndCompat="@drawable/ic_hand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_home_welcome_header"
+        style="@style/headerStyle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:maxLines="2"
+        android:text="@string/second_header_in_home_tv"
+        android:textSize="@dimen/text_giant"
+        app:layout_constraintStart_toStartOf="@+id/tv_home_good_morning"
+        app:layout_constraintTop_toBottomOf="@+id/tv_home_good_morning" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_meal"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_home_welcome_header"
+        app:shapeAppearanceOverlay="@style/rounded_square"
+        app:srcCompat="@drawable/image_more_recipes" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/image_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/image_meal"
+        app:layout_constraintEnd_toEndOf="@+id/image_meal"
+        app:layout_constraintStart_toStartOf="@+id/image_meal"
+        app:layout_constraintTop_toTopOf="@+id/image_meal" />
+
+    <TextView
+        android:id="@+id/tv_MealName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_tiny"
+        android:layout_marginVertical="@dimen/margin_tiny"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large"
+        app:layout_constraintBottom_toTopOf="@+id/tv_kitchenName"
+        app:layout_constraintStart_toStartOf="@+id/image_meal"
+        tools:text="Egyptian Cuisine" />
+
+    <TextView
+        android:id="@+id/tv_kitchenName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_tiny"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Egyption"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/image_meal"
+        app:layout_constraintStart_toStartOf="@+id/tv_MealName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

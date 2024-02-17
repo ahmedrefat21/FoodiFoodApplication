@@ -150,6 +150,10 @@
         <item name="android:scaleType">centerCrop</item>
     </style>
 
+    <style name="rounded_square">
+        <item name="cornerSize">15dp</item>
+    </style>
+
     <style name="TextStyleNameCategories">
         <item name="android:layout_marginStart">@dimen/margin_tiny</item>
         <item name="android:layout_marginBottom">@dimen/margin_tiny</item>
