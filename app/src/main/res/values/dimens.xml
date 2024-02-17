@@ -29,4 +29,20 @@
     <dimen name="very_tiny">2dp</dimen>
 
     <dimen name="zero_dimens">0dp</dimen>
+
+    <!--home dimens-->
+    <dimen name="category_card_dimens">84dp</dimen>
+    <dimen name="category_icon_dimens">36dp</dimen>
+    <dimen name="recipe_of_week_item_width">258dp</dimen>
+    <dimen name="recipe_of_week_item_height">180dp</dimen>
+
+    <!--radius dimens-->
+    <dimen name="radius_tiny">4dp</dimen>
+    <dimen name="radius_small">8dp</dimen>
+    <dimen name="radius_semi_medium">12dp</dimen>
+    <dimen name="radius_medium">14dp</dimen>
+    <dimen name="radius_semi_large">16dp</dimen>
+    <dimen name="radius_large">18dp</dimen>
+    <dimen name="radius_semi_giant">20dp</dimen>
+    <dimen name="radius_giant">24dp</dimen>
 </resources>
