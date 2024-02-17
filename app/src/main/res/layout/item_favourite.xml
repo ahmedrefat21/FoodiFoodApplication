@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_recipe_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    app:cardCornerRadius="10dp"
+
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E8E8E8">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_plannedRecipe"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginVertical="@dimen/margin_small"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"
+            app:srcCompat="@drawable/image_recipe" />
+
+        <TextView
+            android:id="@+id/tv_recipe_name"
+            style="@style/recipeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_tiny"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toTopOf="@id/tv_kitchen_name"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@id/iv_plannedRecipe"
+            app:layout_constraintTop_toTopOf="@id/iv_plannedRecipe"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Recipe Name" />
+
+        <TextView
+            android:id="@+id/tv_kitchen_name"
+            style="@style/bodyTextInKitchenInfoStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/iv_plannedRecipe"
+            app:layout_constraintStart_toStartOf="@id/tv_recipe_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_recipe_name"
+            tools:text="Kitchen Name" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:src="@drawable/favorite_done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
