@@ -4,4 +4,45 @@
     <string name="search">Search</string>
     <string name="favourite">Favourite</string>
     <string name="calender">Calender</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="skip">Skip</string>
+    <string name="don_t_have_an_account_sign_up_now">Don’t have an account, <b><u><font color="#FB5607">Sign Up</font></u></b></string>
+    <string name="already_a_member_log_in">Already a member? <b><u><font color="#FB5607">Log In</font></u></b></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="or">Or</string>
+    <string name="register">Create Account</string>
+    <string name="tv_categories">Categories</string>
+    <string name="details">Details</string>
+    <string name="details_description">Chicken is the best meal</string>
+    <string name="recipes">Recipes</string>
+    <string name="recipe_name">Recipe name</string>
+    <string name="tv_instructions">Instructions</string>
+    <string name="_1_2_cup_all_purpose_flour">1/2 cup all purpose flour</string>
+    <string name="country_name">Egypt</string>
+    <string name="desert">Desert</string>
+    <string name="tv_ingredients">Ingredients</string>
+    <string name="favourites">Favourites</string>
+    <string name="plan_for_this_week">Plan for this week</string>
+    <string name="saturday">Saturday</string>
+    <string name="breakfast">BreakFast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="no_plan">No plan for This week</string>
+    <string name="category">Category</string>
+    <string name="country">Country</string>
+    <string name="ingredient">Ingredient</string>
+    <string name="makrona">Makrona</string>
+    <string name="indian">Indian</string>
+    <string name="welcome_cheif">Welcome Cheif</string>
+    <string name="second_header_in_home_tv">What would you like to cook today?</string>
+    <string name="retry">Retry</string>
 </resources>
