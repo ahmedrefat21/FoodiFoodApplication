@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlanFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tile_of_list_plan"
+            style="@style/headerStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:text="@string/plan_for_this_week"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:gravity="center"
+            android:textSize="@dimen/text_giant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/saturday_card"
+            style="@style/planCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tile_of_list_plan">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_tiny">
+
+                <TextView
+                    android:id="@+id/saturday_day"
+                    style="@style/titleTextPlanStyle"
+                    android:text="@string/saturday"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/meals_of_saturday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/saturday_day"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+
+                        android:id="@+id/image_lunch_saturday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toEndOf="@+id/image_breakfast_saturday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        android:id="@+id/text_lunch_saturday_item"
+                        style="@style/lunchTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_lunch_saturday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_lunch_saturday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_lunch_saturday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_lunch_saturday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/image_breakfast_saturday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/breakfastTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_breakfast_saturday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_breakfast_saturday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_breakfast_saturday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_breakfast_saturday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+
+                        android:id="@+id/image_dinner_saturday_item"
+                        style="@style/dinnerRoundedImagePlan"
+                        app:layout_constraintStart_toEndOf="@+id/image_lunch_saturday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/lunchTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_dinner_saturday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_dinner_saturday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_dinner_saturday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_dinner_saturday_item" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sunday_card"
+            style="@style/planCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saturday_card">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_tiny">
+
+                <TextView
+                    android:id="@+id/sunday_day"
+                    style="@style/titleTextPlanStyle"
+                    android:text="@string/sunday"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/meals_of_sunday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sunday_day">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/image_lunch_sunday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toEndOf="@+id/image_breakfast_sunday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        android:id="@+id/text_lunch_sunday_item"
+                        style="@style/dinnerTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_lunch_sunday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_lunch_sunday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_lunch_sunday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_lunch_sunday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/image_breakfast_sunday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/lunchTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_breakfast_sunday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_breakfast_sunday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_breakfast_sunday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_breakfast_sunday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/image_sunday_dinner_item"
+                        style="@style/breakfastRoundedImagePlan"
+                        app:layout_constraintStart_toEndOf="@+id/image_lunch_sunday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/dinnerTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_sunday_dinner_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_sunday_dinner_item"
+                        app:layout_constraintStart_toStartOf="@id/image_sunday_dinner_item"
+                        app:layout_constraintTop_toTopOf="@id/image_sunday_dinner_item" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/monday_card"
+            style="@style/planCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunday_card">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_tiny">
+
+                <TextView
+                    android:id="@+id/monday_day"
+                    style="@style/titleTextPlanStyle"
+                    android:text="@string/monday"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/meals_of_monday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/monday_day">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+
+                        android:id="@+id/image_lunch_monday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toEndOf="@+id/image_breakfast_monday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        android:id="@+id/text_lunch_monday_item"
+                        style="@style/lunchTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_lunch_monday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_lunch_monday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_lunch_monday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_lunch_monday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/image_breakfast_monday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/breakfastTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_breakfast_monday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_breakfast_monday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_breakfast_monday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_breakfast_monday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+
+                        android:id="@+id/image_dinner_monday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toEndOf="@+id/image_lunch_monday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/dinnerTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_dinner_monday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_dinner_monday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_dinner_monday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_dinner_monday_item" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tuesday_card"
+            style="@style/planCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monday_card">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_tiny">
+
+                <TextView
+                    android:id="@+id/tuesday_day"
+                    style="@style/titleTextPlanStyle"
+                    android:text="@string/tuesday"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/meals_of_tuesday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tuesday_day">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+
+                        android:id="@+id/image_lunch_tuesday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toEndOf="@+id/image_breakfast_tuesday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/lunchTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_lunch_tuesday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_lunch_tuesday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_lunch_tuesday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_lunch_tuesday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/image_breakfast_tuesday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/breakfastTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_breakfast_tuesday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_breakfast_tuesday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_breakfast_tuesday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_breakfast_tuesday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+
+                        android:id="@+id/image_dinner_tuesday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        android:layout_marginTop="130dp"
+                        app:layout_constraintStart_toEndOf="@+id/image_lunch_tuesday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/dinnerTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_dinner_tuesday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_dinner_tuesday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_dinner_tuesday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_dinner_tuesday_item" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/wednesday_card"
+            style="@style/planCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuesday_card">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_tiny">
+
+                <TextView
+                    android:id="@+id/wednesday_day"
+                    style="@style/titleTextPlanStyle"
+                    android:text="@string/wednesday"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/meals_of_wednesday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wednesday_day">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+
+                        android:id="@+id/image_lunch_wednesday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toEndOf="@+id/image_breakfast_wednesday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        android:id="@+id/text_lunch_wednesday_item"
+                        style="@style/lunchTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_lunch_wednesday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_lunch_wednesday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_lunch_wednesday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_lunch_wednesday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/image_breakfast_wednesday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/breakfastTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_breakfast_wednesday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_breakfast_wednesday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_breakfast_wednesday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_breakfast_wednesday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+
+                        android:id="@+id/image_dinner_wednesday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        android:layout_marginTop="130dp"
+                        app:layout_constraintStart_toEndOf="@+id/image_lunch_wednesday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/dinnerTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_dinner_wednesday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_dinner_wednesday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_dinner_wednesday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_dinner_wednesday_item" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/thursday_card"
+            style="@style/planCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wednesday_card">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_tiny">
+
+                <TextView
+                    android:id="@+id/thursday_day"
+                    style="@style/titleTextPlanStyle"
+                    android:text="@string/thursday"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/meals_of_thursday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/thursday_day">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+
+                        android:id="@+id/image_lunch_thursday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toEndOf="@+id/image_breakfast_thursday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        android:id="@+id/text_lunch_thursday_item"
+                        style="@style/lunchTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_lunch_thursday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_lunch_thursday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_lunch_thursday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_lunch_thursday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/image_breakfast_thursday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/breakfastTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_breakfast_thursday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_breakfast_thursday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_breakfast_thursday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_breakfast_thursday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+
+                        android:id="@+id/image_dinner_thursday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toEndOf="@+id/image_lunch_thursday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/dinnerTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_dinner_thursday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_dinner_thursday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_dinner_thursday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_dinner_thursday_item" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/friday_card"
+            style="@style/planCard"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thursday_card">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_tiny">
+
+                <TextView
+                    android:id="@+id/friday_day"
+                    style="@style/titleTextPlanStyle"
+                    android:text="@string/friday"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/meals_of_friday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/friday_day">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+
+                        android:id="@+id/image_lunch_friday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toEndOf="@+id/image_breakfast_friday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        android:id="@+id/text_lunch_friday_item"
+                        style="@style/lunchTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_lunch_friday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_lunch_friday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_lunch_friday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_lunch_friday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/image_breakfast_friday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/breakfastTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_breakfast_friday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_breakfast_friday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_breakfast_friday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_breakfast_friday_item" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+
+                        android:id="@+id/image_dinner_friday_item"
+                        style="@style/lunchRoundedImagePlan"
+                        app:layout_constraintStart_toEndOf="@+id/image_lunch_friday_item"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent=".2" />
+
+                    <TextView
+                        style="@style/dinnerTextPlanStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/image_dinner_friday_item"
+                        app:layout_constraintEnd_toEndOf="@id/image_dinner_friday_item"
+                        app:layout_constraintStart_toStartOf="@id/image_dinner_friday_item"
+                        app:layout_constraintTop_toTopOf="@id/image_dinner_friday_item" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

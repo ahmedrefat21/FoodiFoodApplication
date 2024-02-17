@@ -105,5 +105,65 @@
         <item name="android:scaleType">centerCrop</item>
     </style>
 
+    <style name="titleTextPlanStyle" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_medium</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">#99121212</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:drawableStart">@drawable/ic_plan</item>
+        <item name="android:drawablePadding">@dimen/padding_small</item>
+    </style>
+
+    <style name="roundedImagePlan" parent="">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:foreground">@drawable/foreground_card_category</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="breakfastRoundedImagePlan" parent="roundedImagePlan">
+        <item name="android:src">@drawable/breakfast</item>
+    </style>
+
+    <style name="lunchRoundedImagePlan" parent="roundedImagePlan">
+        <item name="android:src">@drawable/breakfast</item>
+    </style>
+
+    <style name="dinnerRoundedImagePlan" parent="roundedImagePlan">
+        <item name="android:src">@drawable/breakfast</item>
+    </style>
+
+    <style name="mealTextPlanStyle" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="breakfastTextPlanStyle" parent="mealTextPlanStyle">
+        <item name="android:text">"Breakfast"</item>
+    </style>
+
+    <style name="lunchTextPlanStyle" parent="mealTextPlanStyle">
+        <item name="android:text">"Lunch"</item>
+    </style>
+
+    <style name="dinnerTextPlanStyle" parent="mealTextPlanStyle">
+        <item name="android:text">"Dinner"</item>
+    </style>
+
+    <style name="planCard" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin_medium</item>
+        <item name="android:backgroundTint">?backgroundColor</item>
+        <item name="cardCornerRadius">@dimen/margin_medium</item>
+    </style>
+
 
 </resources>
