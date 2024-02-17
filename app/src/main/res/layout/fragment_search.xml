@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ColorFragmentBackground"
+    android:windowSoftInputMode="adjustPan"
+    android:fitsSystemWindows="true"
+    tools:context=".SearchFragment">
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/margin_medium"
+        android:drawablePadding="@dimen/margin_tiny"
+        android:paddingHorizontal="@dimen/margin_medium"
+        android:background="@drawable/search_rounded"
+        android:drawableStart="@drawable/icon_search"
+        android:hint="@string/search"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:chipSpacingHorizontal="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_medium"
+        app:hintEnabled="false"
+
+
+        >
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/category_search"
+            android:text="@string/category"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:textColor="@color/primary_500"
+            app:chipStrokeColor="@color/primary_500"
+            app:chipBackgroundColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/country_search"
+            android:text="@string/country"
+            android:textColor="@color/primary_500"
+            app:chipStrokeColor="@color/primary_500"
+            app:chipBackgroundColor="@color/white"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/ingredients_search"
+            android:text="@string/ingredient"
+            android:textColor="@color/primary_500"
+            app:chipStrokeColor="@color/primary_500"
+            app:chipBackgroundColor="@color/white"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:clipToPadding="false"
+        android:padding="@dimen/padding_12"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chipGroup"
+        app:spanCount="2"
+        tools:itemCount="15"
+        tools:listitem="@layout/item_search_squared" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_animation_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/no_result_of_search" />
+
+    <include
+        layout="@layout/network_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
+    <include
+        layout="@layout/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

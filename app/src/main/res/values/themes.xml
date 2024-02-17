@@ -145,6 +145,21 @@
         <item name="android:textSize">@dimen/text_medium</item>
     </style>
 
+    <style name="CategoriesCardImageStyle">
+        <item name="cornerSize">16dp</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="TextStyleNameCategories">
+        <item name="android:layout_marginStart">@dimen/margin_tiny</item>
+        <item name="android:layout_marginBottom">@dimen/margin_tiny</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
     <style name="breakfastTextPlanStyle" parent="mealTextPlanStyle">
         <item name="android:text">"Breakfast"</item>
     </style>
