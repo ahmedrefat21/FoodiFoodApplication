@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_arrow"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@drawable/circle_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tile_of_list_planned_meals"
+        style="@style/headerStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:layout_marginVertical="@dimen/margin_medium"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:gravity="center"
+        android:textSize="@dimen/text_giant"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintTop_toTopOf="@+id/back_button"
+        tools:text="Meals Of Saturday BreakFast" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_planned_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:layout_marginVertical="@dimen/margin_large"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tile_of_list_planned_meals"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_plannedRecipe"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginVertical="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CircleImageStyle"
+                app:srcCompat="@drawable/image_recipe" />
+
+            <TextView
+                android:id="@+id/tv_planned_recipe"
+                style="@style/recipeTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/margin_tiny"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textAlignment="textStart"
+                app:layout_constraintBottom_toTopOf="@id/tv_kitchen_name"
+                app:layout_constraintEnd_toStartOf="@+id/iv_delete"
+                app:layout_constraintStart_toEndOf="@id/iv_plannedRecipe"
+                app:layout_constraintTop_toTopOf="@id/iv_plannedRecipe"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Recipe Name" />
+
+            <TextView
+                android:id="@+id/tv_kitchen_name"
+                style="@style/bodyTextInKitchenInfoStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/iv_plannedRecipe"
+                app:layout_constraintStart_toStartOf="@+id/tv_planned_recipe"
+                app:layout_constraintTop_toBottomOf="@+id/tv_planned_recipe"
+                tools:text="Kitchen Name" />
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_animation_planned"
+        android:layout_width="@dimen/lottie_width"
+        android:layout_height="@dimen/lottie_height"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tile_of_list_planned_meals"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/no_plan" />
+
+    <TextView
+        android:id="@+id/no_plan_Text"
+        style="@style/TextAppearance.Material3.TitleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_plan"
+        android:visibility="visible"
+
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottie_animation_planned"
+
+        />
+
+    <include
+        layout="@layout/network_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tile_of_list_planned_meals" />
+
+    <include
+        layout="@layout/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tile_of_list_planned_meals" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

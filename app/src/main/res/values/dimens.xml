@@ -45,4 +45,6 @@
     <dimen name="radius_large">18dp</dimen>
     <dimen name="radius_semi_giant">20dp</dimen>
     <dimen name="radius_giant">24dp</dimen>
+    <dimen name="lottie_width">250dp</dimen>
+    <dimen name="lottie_height">250dp</dimen>
 </resources>
