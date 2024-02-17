@@ -99,5 +99,11 @@
         <item name="cornerSize">10%</item>
     </style>
 
+    <style name="ImageStyle">
+        <item name="cornerSizeBottomLeft">48dp</item>
+        <item name="cornerSizeBottomRight">48dp</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
 
 </resources>
